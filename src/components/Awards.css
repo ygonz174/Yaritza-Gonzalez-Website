@@ -1,0 +1,26 @@
+.awards-strip {
+  background: var(--green);
+  overflow: hidden;
+  padding: 0.75rem 0;
+  white-space: nowrap;
+}
+
+.awards-track {
+  display: inline-flex;
+  gap: 3rem;
+  animation: marquee 30s linear infinite;
+}
+
+
+.awards-item {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--sage);
+  letter-spacing: 0.3px;
+  flex-shrink: 0;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

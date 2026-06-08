@@ -1,0 +1,139 @@
+.contact {
+  background: var(--green-dark);
+  color: var(--white);
+}
+
+.contact .section__label { color: var(--sage); }
+.contact .section__title { color: var(--white); }
+.contact .section__subtitle { color: var(--sage-dark); }
+
+.contact__layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Social links */
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact__social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  color: var(--white);
+  font-weight: 500;
+  transition: background 0.25s, transform 0.25s, border-color 0.25s;
+}
+
+.contact__social:hover {
+  background: rgba(255,255,255,0.14);
+  border-color: var(--sage);
+  transform: translateX(4px);
+}
+
+.contact__social-icon {
+  display: flex;
+  align-items: center;
+  color: var(--sage);
+}
+
+.contact__arrow {
+  margin-left: auto;
+  opacity: 0.5;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.contact__social:hover .contact__arrow {
+  opacity: 1;
+  transform: translate(3px, -3px);
+}
+
+/* Form */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--sage);
+  letter-spacing: 0.3px;
+}
+
+.form-field input,
+.form-field textarea {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, background 0.2s;
+  outline: none;
+  resize: vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(217,224,213,0.4);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--sage);
+  background: rgba(255,255,255,0.1);
+}
+
+.contact__submit {
+  align-self: flex-start;
+  background: var(--sage);
+  color: var(--green-dark);
+  box-shadow: none;
+}
+
+.contact__submit:hover {
+  background: var(--white);
+  color: var(--green-dark);
+}
+
+/* Footer line */
+.contact::after {
+  content: '© 2026 Website by Yaritza Gonzalez';
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(217,224,213,0.4);
+  padding: 2rem 0 0;
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+@media (max-width: 768px) {
+  .contact__layout { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+}
