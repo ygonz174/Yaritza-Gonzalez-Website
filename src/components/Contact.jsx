@@ -36,11 +36,19 @@ export default function Contact() {
   const formRef = useRef(null)
   const [sent, setSent] = useState(false)
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    setSent(true)
-    formRef.current.reset()
-    setTimeout(() => setSent(false), 4000)
+    const data = new FormData(formRef.current)
+    const res = await fetch('https://formspree.io/f/mykawrdw', {
+      method: 'POST',
+      body: data,
+      headers: { Accept: 'application/json' },
+    })
+    if (res.ok) {
+      setSent(true)
+      formRef.current.reset()
+      setTimeout(() => setSent(false), 4000)
+    }
   }
 
   return (
