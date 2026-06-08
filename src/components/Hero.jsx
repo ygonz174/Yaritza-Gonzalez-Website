@@ -61,7 +61,7 @@ export default function Hero() {
               Get in Touch
             </Link>
             <a
-              href="/personal-website/Yaritza-Gonzalez-Resume.pdf"
+              href="/Yaritza-Gonzalez-Website/Yaritza-Gonzalez-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn--outline"
